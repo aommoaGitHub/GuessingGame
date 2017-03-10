@@ -9,7 +9,7 @@ import java.util.Random;
  *
  */
 
-public class GuessingGame {
+public class Game {
 	private int upperBound;
 	private int secret;
 	private String hint;
@@ -21,7 +21,7 @@ public class GuessingGame {
 	 * @param upperBound
 	 *            is the max value for the secret number (>=1).
 	 */
-	public GuessingGame(int upperBound) {
+	public Game(int upperBound) {
 		this.upperBound = upperBound;
 		this.secret = getRandomNumber(this.upperBound);
 		this.hint = "";
@@ -54,10 +54,10 @@ public class GuessingGame {
 			this.hint = String.format("Correct. The secret is %d. You used %d guesses.", this.secret, this.count);
 			return true;
 		} else if (numberGuess > this.secret) {
-			this.hint = "Sorry, your guess is too large. ";
+			this.hint = "Sorry, " + numberGuess + " is too large. ";
 			return false;
 		} else {
-			this.hint = "Sorry, your guess is too small. ";
+			this.hint = "Sorry, " + numberGuess + " is too small. ";
 			return false;
 		}
 	}
@@ -78,5 +78,14 @@ public class GuessingGame {
 	 */
 	public int getCount() {
 		return this.count;
+	}
+
+	/**
+	 * Return a correct number.
+	 * 
+	 * @return a correct number.
+	 */
+	public int getSecret() {
+		return secret;
 	}
 }

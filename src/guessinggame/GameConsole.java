@@ -30,7 +30,7 @@ public class GameConsole {
 	 *            is new object of GuessingGame class.
 	 * @return num is number that user guess.
 	 */
-	public int play(GuessingGame game) {
+	public int play(Game game) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println(this.title);
 		int num = 0;

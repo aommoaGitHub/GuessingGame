@@ -6,11 +6,11 @@ package guessinggame;
  * @author Vittunyuta Maeprasart
  *
  */
-public class GuessingApp {
+public class Main {
 	/** create objects and start the game. */
 	public static void main(String[] args) {
-		GuessingGame game = new GuessingGame(20);
-		GameConsole ui = new GameConsole();
-		ui.play(game);
+		GameUI ui = new GameUI();
+		ui.run();
+		System.out.println("Run UI success!!");
 	}
 }
